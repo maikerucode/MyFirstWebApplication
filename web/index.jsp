@@ -42,10 +42,10 @@
         <strong><p>My Birthday is on: November 23, 2001</p></strong>
         <%
           //Java Codes
-          LocalDate Birthday = LocalDate.of(2001, Month.NOVEMBER, 23);
-          LocalDate Today = LocalDate.now();
+          LocalDate birthday = LocalDate.of(2001, Month.NOVEMBER, 23);
+          LocalDate today = LocalDate.now();
           
-          Period p = Period.between(Birthday, Today);
+          Period p = Period.between(birthday, today);
         %>
         
         <strong><p>Days: <%= p.getDays() %></p></strong> 
