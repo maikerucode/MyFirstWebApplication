@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : index
     Created on : Feb 7, 2022, 8:31:49 PM
     Author     : michael
@@ -14,19 +14,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Date</title>
         <style media="screen">
+        
       .home {
         margin: 0 auto;
         background-image: url(https://images2.alphacoders.com/960/thumb-1920-960506.png);
         background-repeat: no-repeat;
         background-size: cover;
       }
-      
+
       .divider {
         display: inline-block;
         width: 47%;
         font-family: Tahoma;
       }
-      
+
     </style>
     </head>
     <body class="home">
@@ -44,12 +45,12 @@
           //Java Codes
           LocalDate birthday = LocalDate.of(2001, Month.NOVEMBER, 23);
           LocalDate today = LocalDate.now();
-          
+
           Period p = Period.between(birthday, today);
         %>
-        
-        <strong><p>Days: <%= p.getDays() %></p></strong> 
-        <strong><p>Months: <%= p.getMonths() %></p></strong> 
+
+        <strong><p>Days: <%= p.getDays() %></p></strong>
+        <strong><p>Months: <%= p.getMonths() %></p></strong>
         <strong><p>Years: <%= p.getYears() %></p></strong>
         <a href="http://localhost:8080/MyFirstWebApplication/MyDateServlet">Click here to proceed to Servlet Implementation!</a>
         </div>
