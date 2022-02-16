@@ -1,10 +1,9 @@
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
@@ -21,9 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author michael
  */
-public class MyDateServlet extends HttpServlet {
-    
-
+public class ExtraServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,12 +33,10 @@ public class MyDateServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8"); // specifies the output type of the servlet
-
-        // printwriter is used to write text to the response object
+        response.setContentType("text/html;charset=UTF-8");
+        
         PrintWriter out = response.getWriter();
-
-
+        
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -51,7 +46,7 @@ public class MyDateServlet extends HttpServlet {
             out.println("<style>");
 
             out.println("body {");
-            out.println("background-image: url(https://images2.alphacoders.com/960/thumb-1920-960506.png);\n" +
+            out.println("background-image: url(https://images4.alphacoders.com/714/thumb-1920-714659.png);\n" +
 "           background-repeat: no-repeat;\n" +
 "           background-size: cover;");
             out.println("margin: 0 auto;");
@@ -66,7 +61,7 @@ public class MyDateServlet extends HttpServlet {
             out.println("</style>");
 
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body text=\"white\">");
             out.println("<div align=\"center\" style=\"position:absolute; top:220px\">");
             out.println("<h3>" + getServletContext().getInitParameter("header") + "</h3>");
             out.println("<h1>(Servlet Implementation)</h1>");
@@ -91,8 +86,7 @@ public class MyDateServlet extends HttpServlet {
             out.println("</p></strong>");
             out.println("</body>");
             out.println("</html>");
-            out.println("<a href=\"http://localhost:8080/MyFirstWebApplication\" style=\"color: maroon\">Click here to proceed to JSP Implementation!</a>");
-            out.println("<br><br><a href=\"http://localhost:8080/MyFirstWebApplication/ExtraServlet\" style=\"color: maroon\">Click here to proceed to Servlet 2!</a>");
+            out.println("<a href=\"http://localhost:8080/MyFirstWebApplication/MyDateServlet\" style=\"color: white\">Click here to proceed to Servlet Implementation!</a>");
             out.println("<h3>" + getServletContext().getInitParameter("footer") + "</h3>");
             out.println("</div>");
         } finally {

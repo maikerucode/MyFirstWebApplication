@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <param-name>header</param-name>
+        <param-value>I love attending 2609 Classes!</param-value>
+    </context-param>
+    <context-param>
+        <param-name>footer</param-name>
+        <param-value>University of Santo Tomas - 2022</param-value>
+    </context-param>
     <servlet>
         <servlet-name>MyDateServlet</servlet-name>
         <servlet-class>MyDateServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExtraServlet</servlet-name>
+        <servlet-class>ExtraServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyDateServlet</servlet-name>
         <url-pattern>/MyDateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExtraServlet</servlet-name>
+        <url-pattern>/ExtraServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

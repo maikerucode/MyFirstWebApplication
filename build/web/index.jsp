@@ -32,6 +32,7 @@
     </head>
     <body class="home">
         <div class="divider" align="center" style="position:absolute; top:220px">
+        <h3><%= getServletContext().getInitParameter("header") %></h3>
         <h1>(JSP Implementation)</h1>
         <h2>Date Today: </h2>
         <strong>
@@ -53,6 +54,7 @@
         <strong><p>Months: <%= p.getMonths() %></p></strong>
         <strong><p>Years: <%= p.getYears() %></p></strong>
         <a href="http://localhost:8080/MyFirstWebApplication/MyDateServlet">Click here to proceed to Servlet Implementation!</a>
+        <h3><%= getServletContext().getInitParameter("footer") %></h3>
         </div>
     </body>
 </html>
